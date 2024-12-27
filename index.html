@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدیریت انبار</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>سیستم مدیریت انبار</h1>
+    <form id="inventory-form">
+        <input type="text" id="item-name" placeholder="نام کالا" required>
+        <input type="number" id="item-quantity" placeholder="تعداد" required>
+        <button type="submit">افزودن</button>
+    </form>
+    <table id="inventory-table">
+        <thead>
+            <tr>
+                <th>نام کالا</th>
+                <th>تعداد</th>
+                <th>حذف</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="app.js"></script>
+</body>
+</html>
