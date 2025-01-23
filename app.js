@@ -1,38 +1,43 @@
-// app.js
-const form = document.getElementById('inventory-form');
-const tableBody = document.querySelector('#inventory-table tbody');
-
-// آرایه برای ذخیره اطلاعات کالاها
-let inventory = [];
-
-// افزودن کالا
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const itemName = document.getElementById('item-name').value;
-    const itemQuantity = document.getElementById('item-quantity').value;
-
-    // افزودن کالا به آرایه
-    inventory.push({ name: itemName, quantity: parseInt(itemQuantity) });
-    updateTable();
-    form.reset();
-});
-
-// بروزرسانی جدول
-function updateTable() {
-    tableBody.innerHTML = ''; // پاک کردن محتوای قبلی
-    inventory.forEach((item, index) => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${item.name}</td>
-            <td>${item.quantity}</td>
-            <td><button onclick="deleteItem(${index})">حذف</button></td>
-        `;
-        tableBody.appendChild(row);
-    });
+function showLogin() {
+  $(".login-link").addClass("active");
+  $(".signup-link").removeClass("active");
+  $(".btn-login").text("ورود");
+  $(".confirm-password-row").hide()
+  $(".forgot-password-row").show();
 }
 
-// حذف کالا
-function deleteItem(index) {
-    inventory.splice(index, 1);
-    updateTable();
+function showSignup() {
+  $(".login-link").removeClass("active");
+  $(".signup-link").addClass("active");
+  $(".btn-login").text("عضویت");
+  $(".confirm-password-row").show()
+  $(".forgot-password-row").hide();
 }
+
+function checkPasswordStrength() {
+  if (!$("#password").val() || $(".login-link").hasClass("active")) return;
+
+  const emoji = {
+    0: "\u{1F628}", // Fearful 
+    1: "\u{1F616}", // Confounded 
+    2: "\u{1F61E}", // Disappointed 
+    3: "\u{1F615}", // Confused 
+    4: "\u{1F603}" // Grinning 
+  };
+  const result = zxcvbn($("#password").val());
+  const warning = result.feedback.warning || "";
+  const suggestion = result.feedback.suggestions.join(", ").replace(/,/g, "") || "";
+  
+  $("#password-strength").html(emoji[result.score]);
+  $(".help-text").text(`سعی کنید پسوردتان بهتر شود !`);
+}
+
+function init() {
+  $(".login-link").on("click", showLogin);
+  $(".signup-link").on("click", showSignup);
+  $("#password")
+    .on("input focus", checkPasswordStrength)
+    .on("blur", () => $("#password-strength, .help-text").empty());
+}
+
+$(init);
