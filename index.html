@@ -1,65 +1,100 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <title>فرم ورود و عضویت متریال</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css'>
-  <link href="https://fonts.googleapis.com/css?family=Markazi+Text" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ولنتاین مبارک ❤️</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        #message {
+            font-size: 1.5em;
+            opacity: 0;
+            animation: fadeIn 3s ease-in-out 2s forwards;
+        }
+
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 2rem;
+            animation: float 4s infinite ease-in-out;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            background: #ff4d4d;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 3s ease-in-out 3s forwards;
+            opacity: 0;
+        }
+
+        button:hover {
+            background: #ff1a1a;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
-    <!--www.almasweb.org-->
-  <div class="container">
-  <div class="row">
-    <div class="col s12 m6 offset-m3">
-      <div class="card hoverable">
-        <div class="card-content grey-text text-lighten-1">
-          <div class="row card-title">
-            <div class="col s6 left-align login-link"><span>ورود</span></div>
-            <div class="col s6 right-align signup-link active"><span>عضو شوید</span></div>
-          </div>
-          <div class="row">
-            <div class="input-field email-field col s12">
-              <input id="email" type="email" class="validate white-text">
-              <label for="email" class="grey-text text-lighten-1">ایمیل</label>
-            </div>
-          </div>
-          <div class="row">
-            <form action="." class="col s12 password-form" autocomplete="nope">
-              <div class="row">
-                <div class="input-field password-field col s12">
-                  <input id="password" type="password" class="validate">
-                  <span id="password-strength"></span>
-                  <label for="password">پسورد</label>
-                  <p class="help-text"></p>
-                </div>
-              </div>
-              <div class="row confirm-password-row">
-                <div class="input-field confirm-password-field col s12">
-                 <input id="confirm-password" type="password" class="validate">
-                 <label for="confirm-password">تایید پسورد</label>
-               </div>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="card-action center-align">
-          <div class="row">
-            <a class="btn-login btn amber darken-4 waves-effect white-text">ورود</a>
-          </div>
-          <div class="row forgot-password-row">
-            <span class="amber-text text-darken-4 waves-effect">پسوردتان را فراموش کردید ؟</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js'></script>
-    <script  src="app.js"></script>
-        <!--www.almasweb.org-->
+
+    <h1>❤️ ولنتاین مبارک M عزیزم! ❤️</h1>
+    <p id="message">امیدوارم همیشه خوشحال باشی و لبخندت همیشگی باشه! 🌹</p>
+    <button onclick="showLoveMessage()">یه چیز خاص برات دارم! 💌</button>
+
+    <script>
+        function showLoveMessage() {
+            alert("دوستت دارم M! ❤️ تو خاص‌ترین آدم دنیایی! 🌍💕");
+        }
+
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.innerHTML = "❤️";
+            document.body.appendChild(heart);
+            
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight;
+            heart.style.left = `${x}px`;
+            heart.style.top = `${y}px`;
+
+            setTimeout(() => {
+                heart.remove();
+            }, 4000);
+        }
+
+        setInterval(createHeart, 500);
+    </script>
+
 </body>
 </html>
