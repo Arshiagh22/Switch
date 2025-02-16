@@ -7,6 +7,25 @@
 
     <!-- لینک Bootstrap 4 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* تنظیم ارتفاع اسلایدر برای نمایش بهتر در موبایل و دسکتاپ */
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            max-height: 500px; /* تنظیم حداکثر ارتفاع برای جلوگیری از کشیدگی */
+        }
+
+        /* کاهش اندازه زیرنویس در موبایل */
+        @media (max-width: 768px) {
+            .carousel-caption h5 {
+                font-size: 16px;
+            }
+            .carousel-caption p {
+                font-size: 12px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -22,14 +41,14 @@
     <!-- تصاویر اسلایدر -->
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="https://raw.githubusercontent.com/Arshiagh22/Switch/main/Photoroom-۲۰۲۵۰۱۲۰_۰۰۴۵۱۲.png" alt="Instagram Screenshot" width="1100" height="500">
+            <img class="img-fluid" src="https://raw.githubusercontent.com/Arshiagh22/Switch/main/Screenshot_۲۰۲۵۰۲۱۶-۰۱۵۸۵۵_Instagram.jpg" alt="Instagram Screenshot">
             <div class="carousel-caption d-none d-md-block">
                 <h5>نمایی از اینستاگرام</h5>
                 <p>این تصویر از اپلیکیشن اینستاگرام گرفته شده است.</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="https://raw.githubusercontent.com/Arshiagh22/Switch/main/Screenshot_۲۰۲۵۰۲۱۶-۰۱۵۸۵۵_Instagram.jpg" alt="Photoroom Image" width="1100" height="500">
+            <img class="img-fluid" src="https://raw.githubusercontent.com/Arshiagh22/Switch/main/Photoroom-۲۰۲۵۰۱۲۰_۰۰۴۵۱۲.png" alt="Photoroom Image">
             <div class="carousel-caption d-none d-md-block">
                 <h5>تصویر پردازش‌شده در Photoroom</h5>
                 <p>این عکس با استفاده از نرم‌افزار Photoroom ویرایش شده است.</p>
@@ -52,4 +71,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-    </html>
+</html>
