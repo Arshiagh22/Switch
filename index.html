@@ -2,150 +2,38 @@
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ولنتاین مبارک ❤️</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: url('https://raw.githubusercontent.com/Arshiagh22/Switch/main/IMG_20250212_004640_347.jpg') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-            font-family: 'Arial', sans-serif;
-            color: white;
-            overflow: hidden;
-            position: relative;
-        }
-
-        h1 {
-            font-size: 3em;
-            background: rgba(0, 0, 0, 0.3);
-            padding: 15px;
-            border-radius: 15px;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        #message {
-            font-size: 1.7em;
-            opacity: 0;
-            animation: fadeIn 3s ease-in-out 2s forwards;
-            background: rgba(0, 0, 0, 0.3);
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        .heart {
-            position: absolute;
-            color: red;
-            font-size: 2rem;
-            animation: float 4s infinite ease-in-out;
-        }
-
-        .rose {
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            background: url('rose.png') no-repeat center/contain;
-            animation: fall 5s linear infinite;
-        }
-
-        button {
-            margin-top: 20px;
-            padding: 12px 25px;
-            font-size: 1.5em;
-            border: none;
-            background: #ff4d4d;
-            color: white;
-            border-radius: 15px;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 3s ease-in-out 3s forwards;
-            opacity: 0;
-        }
-
-        button:hover {
-            background: #ff1a1a;
-        }
-
-        audio {
-            display: none;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0); }
-        }
-
-        @keyframes fall {
-            0% { transform: translateY(-50px) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 4 Carousel</title>
+    
+    <!-- لینک Bootstrap 4 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-    <h1>❤️ مصی عزیزم ولنتاین مبارک ❤️</h1>
-    <p id="message">عشقم، امیدوارم همیشه شاد و خوشحال باشی! 🌹</p>
-    <button onclick="showLoveMessage()">یه چیز خاص برات دارم! 💌</button>
+<!-- شروع اسلایدر -->
+<div id="demo" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="adminesite_1.jpg" alt="Los Angeles" width="1100" height="500">
+        </div>
+        <div class="carousel-item">
+            <img src="adminesite_2.jpg" alt="Chicago" width="1100" height="500">
+        </div>
+    </div>
 
-    <audio id="bg-music" loop>
-        <source src="love-song.mp3" type="audio/mp3">
-    </audio>
+    <!-- دکمه‌های جابجایی -->
+    <a class="carousel-control-prev" href="#demo" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+</div>
+<!-- پایان اسلایدر -->
 
-    <script>
-        function showLoveMessage() {
-            alert("تو زیباترین و خاص‌ترین آدم دنیایی 🌍💕");
-        }
-
-        function createHeart() {
-            const heart = document.createElement("div");
-            heart.className = "heart";
-            heart.innerHTML = "❤️";
-            document.body.appendChild(heart);
-            
-            const x = Math.random() * window.innerWidth;
-            const y = Math.random() * window.innerHeight;
-            heart.style.left = `${x}px`;
-            heart.style.top = `${y}px`;
-
-            setTimeout(() => {
-                heart.remove();
-            }, 4000);
-        }
-
-        function createRose() {
-            const rose = document.createElement("div");
-            rose.className = "rose";
-            rose.style.left = Math.random() * window.innerWidth + "px";
-            document.body.appendChild(rose);
-
-            setTimeout(() => {
-                rose.remove();
-            }, 5000);
-        }
-
-        setInterval(createHeart, 700);
-        setInterval(createRose, 500);
-
-        // پخش موزیک بعد از کلیک کاربر
-        document.body.addEventListener("click", function() {
-            document.getElementById("bg-music").play();
-        });
-    </script>
+<!-- لینک‌های Bootstrap 4 JS و jQuery -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
