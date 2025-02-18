@@ -3,44 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap 5 Responsive Grid</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Bootstrap 3 Responsive Grid</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <style>
         .header { height: 100px; background: #007bff; color: white; display: flex; align-items: center; justify-content: center; }
         .sidebar { height: 500px; background: #6c757d; color: white; display: flex; align-items: center; justify-content: center; }
         .post { height: 200px; background: #ffc107; color: black; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
         .footer { height: 50px; background: #28a745; color: white; display: flex; align-items: center; justify-content: center; }
     </style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
 <body>
 
 <div class="container">
     <!-- هدر -->
     <div class="row">
-        <div class="col-12 header">هدر</div>
+        <div class="col-xs-12 header">هدر</div>
     </div>
 
-    
     <div class="row">
-   
-        <div class="col-md-3 col-12 sidebar">سایدبار چپ</div>
-        
-       
-        <div class="col-md-6 col-12 order-md-6">
+        <!-- پست‌ها (در موبایل اول نمایش داده شود) -->
+        <div class="col-xs-12 col-md-6 col-md-push-3">
             <div class="post">پست ۱</div>
             <div class="post">پست ۲</div>
         </div>
 
-       
-        <div class="col-md-3 col-12 sidebar">سایدبار راست</div>
+        <!-- سایدبار چپ (در دسکتاپ چپ باشد) -->
+        <div class="col-xs-12 col-md-3 col-md-pull-6 sidebar">سایدبار چپ</div>
+
+        <!-- سایدبار راست (در دسکتاپ راست باشد) -->
+        <div class="col-xs-12 col-md-3 sidebar">سایدبار راست</div>
     </div>
 
-  
+    <!-- فوتر -->
     <div class="row">
-        <div class="col-12 footer">فوتر</div>
+        <div class="col-xs-12 footer">فوتر</div>
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>
