@@ -7,33 +7,32 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <style>
         .header { height: 100px; background: #007bff; color: white; display: flex; align-items: center; justify-content: center; }
-        .sidebar { height: 500px; background: #6c757d; color: white; display: flex; align-items: center; justify-content: center; }
-        .post { height: 200px; background: #ffc107; color: black; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
+        .sidebar { height: 400px; background: #6c757d; color: white; display: flex; align-items: center; justify-content: center; }
+        .post { height: 400px; background: #ffc107; color: black; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
         .footer { height: 50px; background: #28a745; color: white; display: flex; align-items: center; justify-content: center; }
+        .post1 { height: 100px; background: #ffc107; color: black; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
+        .post2 { height: 100px; background: #ffc107; color: black; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <!-- هدر -->
+
     <div class="row">
-        <div class="col-xs-12 header">هدر</div>
+        <div class="col-md-12 header">هدر</div>
     </div>
-<div class="col-xs-12 col-md-3 sidebar">سایدبار راست</div>
+
 </div>
     <div class="row">
-        <!-- پست‌ها (در موبایل اول نمایش داده شود) -->
-        <div class="col-xs-12 col-md-6 col-md-push-3">
-            <div class="post">پست ۱</div>
-            <div class="post">پست ۲</div>
-        </div>
-
-        <!-- سایدبار چپ (در دسکتاپ چپ باشد) -->
-        <div class="col-xs-12 col-md-3 col-md-pull-6 sidebar">سایدبار چپ</div>
-
-        <!-- سایدبار راست (در دسکتاپ راست باشد) -->
-        
-    <!-- فوتر -->
+        <div class="col-md-3 sidebar">سایدبار راست</div>
+            <div class="col-md-3 post">پست ۱</div>
+            <div class="col-md-3 post">پست ۲</div>
+<div class="col-md-3 sidebar">سایدبار چپ</div>
+    </div>
+    <div class"row">
+        <div class="col-md-3 post1">پست ۱</div>
+        <div class="col-md-3 post2">پست ۲</div>
+    </div>
     <div class="row">
         <div class="col-xs-12 footer">فوتر</div>
     </div>
