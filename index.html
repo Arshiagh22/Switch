@@ -69,10 +69,6 @@
         height: 260px;
         background-color: #d9d8d8;
       }
-      .name {
-        font-family: "Times New Roman", Times, serif;
-        font-size: 80px;
-      }
       .text {
         color: #f4c26b;
       }
@@ -80,6 +76,18 @@
         border-right: 2px solid rgb(167, 160, 160);
         padding-right: 20px;
         margin-right: 20px;
+      }
+      .name {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 80px;
+      }
+      @media (max-width: 500px) {
+        .name {
+          font-size: 40px;
+        }
+        .title-Attorney {
+          height: 180px;
+        }
       }
     </style>
   </head>
@@ -93,7 +101,7 @@
           <div class="title-Attorney ps-5 shadow">
             <div class="pt-5">
               <h3 class="Attorney">ATTORNEY</h3>
-              <p class="name ms-2">John Carter</p>
+              <p class="name">John Carter</p>
             </div>
           </div>
           <div class="p-5">
