@@ -1,0 +1,102 @@
+body {
+  font-family: "Vazir", "Lora", serif;
+  font-size: 14px;
+}
+.title {
+  display: flex;
+  align-items: center;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 15px;
+}
+.title-content {
+  display: flex;
+  align-items: center;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 15px;
+}
+.Attorney {
+  display: flex;
+  align-items: center;
+  font-family: "Vazir", "Lora", serif;
+}
+.title::before,
+.title-content::before,
+.Attorney::before {
+  content: "";
+  display: inline-block;
+  background-color: #f4c26b;
+  margin-left: 10px;
+  margin-right: 6px;
+}
+.title::before {
+  width: 30px;
+  height: 2px;
+}
+.title-content::before {
+  width: 40px;
+  height: 2px;
+}
+.Attorney::before {
+  width: 40px;
+  height: 3px;
+  margin-bottom: 6px;
+}
+.img-icon {
+  height: 28px;
+}
+.title-Attorney {
+  width: 100%;
+  height: 260px;
+  background-color: #d9d8d8;
+}
+.text {
+  color: #f4c26b;
+}
+.bor {
+  border-right: 2px solid #a7a0a0;
+  padding-right: 20px;
+  margin-right: 20px;
+}
+.name {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 80px;
+}
+@media (max-width: 500px) {
+  .name {
+    font-size: 40px;
+  }
+  .title-Attorney {
+    height: 140px;
+  }
+}
+.bg-popnews {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+.popnews {
+  background-color: #181717;
+  color: #f4c26b;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 80%;
+  text-align: center;
+  border: 2px solid white;
+}
+.fabtn,
+.enbtn {
+  background-color: #f4c26b;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
